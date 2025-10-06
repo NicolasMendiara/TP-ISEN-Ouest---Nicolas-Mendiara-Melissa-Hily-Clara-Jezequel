@@ -1,48 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <header>
+<link rel="stylesheet" href="style.css">
 
-        <img src="images/logo.png" alt="logo ISEN" width="300">
-        <nav>
-            <a href="index.html">Accueil</a> |
-            <a href="devenir_inge.html">Devenir ingénieur</a> |
-            <a href="postbac.html">Post-bac</a> |
-            <a href="apprentissage.html">Apprentissage</a> |
-            <a href="formations.html">Formations</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
-        <h1>Contact</h1>
-        
-    </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — ISEN Ouest</title>
 </head>
 <body>
 
-    <!-- Section Contact (F37) -->
-    <section class="contact">
-        <h2>Formulaire de contact</h2>
-        <p>N'hesitez pas à nous contacter pour toute information complémentaire en remplissant le formulaire suivant :</p>
-        
-        <form action="#" method="post">
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" required>
+  <header>
+    <img src="images/logo.png" alt="Logo ISEN Ouest">
+    <nav>
+      <a href="index.html">Accueil</a> |
+      <a href="devenir_inge.html">Devenir ingénieur</a> |
+      <a href="postbac.html">Post-bac</a> |
+      <a href="apprentissage.html">Apprentissage</a> |
+      <a href="formations.html">Formations</a> |
+      <a href="contact.html" aria-current="page">Contact</a> |
+    </nav>
+  </header>
 
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" equired>
+  <main>
+    <h1>Contactez-nous</h1>
+    <p>Remplissez le formulaire ci-dessous pour nous envoyer votre demande.</p>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" required>
+    <form action="/contact" method="post" novalidate>
+      <div>
+        <label for="prenom">Prénom *</label>
+        <input id="prenom" name="prenom" type="text" required autocomplete="given-name">
+      </div>
+      <div>
+        <label for="nom">Nom *</label>
+        <input id="nom" name="nom" type="text" required autocomplete="family-name">
+      </div>
+      <div>
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required autocomplete="email" inputmode="email">
+      </div>
+      <div>
+        <label for="email2">Confirmez l’email *</label>
+        <input id="email2" name="email_confirm" type="email" required autocomplete="email" inputmode="email">
+      </div>
+      <div>
+        <label for="objet">Objet *</label>
+        <select id="objet" name="objet" required>
+          <option value="" selected disabled>— Sélectionnez —</option>
+          <option>Informations formations post-bac</option>
+          <option>Informations apprentissage</option>
+          <option>Admissions</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" name="optin_infos">
+          J’accepte de recevoir des informations de la part de l’ISEN Ouest.
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" name="consentement" required>
+          J’accepte la politique de confidentialité.
+        </label>
+      </div>
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
 
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+  <footer>
+    <p>&copy; ISEN Ouest — Page Contact</p>
+  </footer>
 
-        <button type="submit">Envoyer</button>
-        </form>
-    </section>
-
-    <!-- FOOTER (F36) -->
-    <footer>
-        <p>ISEN Ouest - Contact</p>
-    </footer>
 </body>
 </html>
