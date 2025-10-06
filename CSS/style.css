@@ -21,9 +21,12 @@ header {
 }
 
 header img {
-  max-height: 60px;
+  height: 60px;      /* hauteur fixe */
+  width: auto;       /* garde les proportions */
   vertical-align: middle;
 }
+
+
 
 nav {
   margin-top: 10px;
